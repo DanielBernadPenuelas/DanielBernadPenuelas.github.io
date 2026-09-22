@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Clientes</title>
+    <link rel="stylesheet" href="../css/Área de cliente.css">
+    <link rel="stylesheet" href="../Js/Área_de_cliente.js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-primary fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="../html/Área de cliente.html">
+                    <img class="icono" src="../img/LogoCompleto.png" onclick="window.location.href='../Valhalla_gimnasio.html'" alt="Valhallagym">
+                    Valhallagym
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menunav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Menunav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../html/Clubes.html">Clubes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/Horario.html">Horario</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/Blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/IniciarSesion.html">Inscríbete</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/Área de cliente.html">Área de cliente</a></li>
+                        <li class="nav-item"><img class="icono2" src="../img/Recurso 1.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container margen">
+        <h2 class="text-center mb-4">Área de Cliente</h2>
+        <form action="/seleccionar_plan" method="post" id="formulario-plan">
+            <div>
+                <label for="plan" class="form-label">Seleccione su plan:</label>
+                <select class="form-select" id="plan">
+                    <option value="nutricionista" id="Nutricionista">Plan de Nutricionista +10€</option>
+                    <option value="cocina" id="Cocina">Plan de Cocina +20€</option>
+                    <option value="ambos" id="Nutrición">Nutrición y cocina +25€</option>
+                    <option value="ambos" id="Estandar">Normal</option>
+                </select>
+            </div>
+            <a class="btn btn-primary nav-link" id="plan-button" type="submit" href="../html/Métodospagos.html" onclick="plan()"> Añadir plan</a>
+        </form>
+        <form action="/seleccionar_club" method="post" id="formulario-club">
+            <div class="mb-3 mt-5">
+                <label for="ubicacion" class="form-label">Seleccione su gimnasio a cambiar:</label>
+                <select class="form-select" id="ubicacion">
+                    <option value="nutricionista" id="Valencia">Valencia, Colon 25</option>
+                    <option value="cocina" id="Barcelona">Barcelona, Rambla 24</option>
+                    <option value="ambos" id="Madrid">Madrid, Avenida de ámerica 25</option>
+                </select>
+            </div>
+            <a  href="../html/IniciarSesion.html" class="btn btn-primary nav-link" id="club-button" onclick="club()"> Seleccionar gimnasio</a>
+        </form>
+        <form action="/Incidencia" method="post" id="incidencia">
+            <div class="mb-3 mt-5 row">
+                <label for="Incidencia" class="form-label" id="formulario">Incidencia</label>
+                <input type="text" class="form-control tamaño" id="incidencia" placeholder="Describe tu problema">
+            </div>
+            <a type="submit" class="btn btn-primary w-100" id="incidencia" onclick="incidencia()">Enviar la incidencia</a>
+        </form>
+        <div class="mt-4 text-center">
+            <button class="btn btn-success margen_abajo" id="Alta" onclick="alta()">Darse de Baja</button>
+        </div>
+    </div>   
+    <footer class="bg-primary text-center fixed-bottom row ">
+        <nav class="navbar">
+            <div class="container">
+                <p>&copy; 2024 Valhallagym. Todos los derechos reservados.</p>
+                <div class="d-flex justify-content-center">
+                  <a class="text-decoration-none text-dark me-3"> 
+                    <p >Valhallagym@instagram.com</p>
+                  </a>
+                  <a class="text-decoration-none text-dark me-3">
+                    <img src="../img/twitter.png" class="img_peque" alt="">
+                  </a>
+                  <a class="text-decoration-none text-dark me-3">
+                    <p >Valhallagym@gmail.com</p>
+                  </a>
+                  <a class="text-decoration-none text-dark me-3">                   
+                    <img src="../img/instagram.png" class="img_peque" alt="">
+                  </a>
+                </div>
+              </div>
+        </nav>      
+    </footer>
+    <script>
+        const formularioPlan = document.querySelector('form[action="/seleccionar-plan"]');
+        const formularioClub = document.querySelector('form[action="/seleccionar-club"]');
+        const formularioIncidencia = document.querySelector('form[action="/Incidencia"]');       
+
+        formularioIncidencia.addEventListener('submit', function(evento) {
+          evento.preventDefault();
+        
+          const inputIncidencia = document.querySelector('.form-control.tamaño');
+        
+          inputIncidencia.value = '';
+        
+          console.log('Incidencia reportada');
+        });
+
+        function incidencia() {
+            const formularioIncidencia = document.querySelector('form[action="/Incidencia"]');
+            formularioIncidencia.addEventListener('submit', function(evento) {
+                evento.preventDefault();
+
+                const incidencia = document.querySelector('#incidencia').value;
+
+                console.log(`Incidencia reportada: ${incidencia}`);
+                document.querySelector('#incidencia').value = '';
+            });
+        }
+        document.querySelector('.btn-primary').addEventListener('click', incidencia);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

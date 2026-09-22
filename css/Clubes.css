@@ -1,0 +1,32 @@
+.club-card img {
+    height: 200px;
+    object-fit: cover;
+}
+.icono{
+    width: 80px;
+    height: 80px;
+}
+.icono2{
+    width: 45px;
+    height: 45px;
+}
+.img_peque{
+    width: 30px;
+    height: 30px;
+}
+.margen-arriba{
+    margin-top: 100px;
+}
+.margen-caja {
+    margin-bottom: 24px;
+}
+.tamaño-mapa {
+    height: 200px;
+    width: 395px;
+}
+.fondo{
+    background-color: rgb(0, 162, 255);
+}
+.margen-arriba{
+    margin-top: 100px;
+}

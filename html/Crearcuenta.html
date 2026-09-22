@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crearcuenta</title>
+    <link rel="stylesheet" href="../Js/Crearcuenta.js">
+    <link rel="stylesheet" href="../css/Crearcuenta.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img class="icono" src="../img/LogoCompleto.png" onclick="window.location.href='../Valhalla_gimnasio.html'" alt="Valhallagym logo">
+                    Valhallagym
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menunav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="Menunav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="../html/Clubes.html">Clubes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/Horario.html">Horario</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/Blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/IniciarSesion.html">Inscríbete</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../html/Área de cliente.html">Área de cliente</a></li>
+                        <li class="nav-item" href="../html/IniciarSesion.html"><img class="icono2" src="../Img/Recurso 1.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container py-5">
+        <form action="" id="registro">
+            <div class="text-center">
+                <h1>Crea un usuario</h1>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Escribe tu email">
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <label for="contraseña"  class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Escribe tu contraseña">
+                </div>
+                <div class="col-12">
+                    <label for="dirección"  class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="dirección" placeholder="Escribe tu dirección">
+                </div>
+                <div class="col-12">
+                    <label for="postal"  class="form-label">Código postal</label>
+                    <input type="text" class="form-control" id="postal" placeholder="Escribe tu código postal">
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-12">
+                    <label for="pais" class="form-label">País</label>
+                    <input type="text" class="form-control" id="pais" placeholder="País">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="ciudad" placeholder="Ciudad">
+                </div>
+                <div class="col-12">
+                    <div class="form-check">
+                        <input type="checkbox" id="checkTerms" class="form-check-input">
+                        <label for="checkTerms" class="form-check-label">Aceptar términos y condiciones</label>
+                    </div>
+                </div>
+                <div class="col-12 margen_arriba">
+                    <a href="../html/Pago.html" style="min-width: max-content;">Aceptar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="bg-primary text-center fixed-bottom row">
+        <nav class="navbar">
+            <div class="container">
+                <p>&copy; 2024 Valhallagym. Todos los derechos reservados.</p>
+                <div class="d-flex justify-content-center">
+                  <a class="text-decoration-none text-dark me-3"> 
+                    <p >Valhallagym@instagram.com</p>
+                  </a>
+                  <a class="text-decoration-none text-dark me-3">
+                    <img src="../Img/twitter.png" class="img_peque" alt="">
+                  </a>
+                  <a class="text-decoration-none text-dark me-3">
+                    <p >Valhallagym@gmail.com</p>
+                  </a>
+                  <a class="text-decoration-none text-dark me-3">                   
+                    <img src="../Img/instagram.png" class="img_peque" alt="">
+                  </a>
+                </div>
+              </div>
+        </nav>      
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
