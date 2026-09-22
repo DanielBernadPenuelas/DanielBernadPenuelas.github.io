@@ -37,8 +37,7 @@ web_Valhalla_gym/
 │   └── script.js
 ├── Img/                        # Imágenes y recursos
 │   └── ...
-├── package.json               # Dependencias del proyecto
-└── package-lock.json          # Versiones bloqueadas
+└── Valhalla_gym.html          # Página principal
 
 ```
 
