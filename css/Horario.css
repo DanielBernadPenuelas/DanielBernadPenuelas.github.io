@@ -52,27 +52,8 @@ h1 {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background-color: #0d6efd;
     color: white;
-    padding: 1.5rem 0;
-    margin-top: 3rem;
-}
-
-footer p, footer a {
-    margin-bottom: 0.5rem;
-    color: white !important;
-}
-
-footer a:hover {
-    opacity: 0.8;
-}
-
-.img_peque {
-    height: 24px;
-    width: auto;
 }
 
 @media (max-width: 768px) {
