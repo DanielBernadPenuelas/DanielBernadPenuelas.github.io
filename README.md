@@ -2,6 +2,9 @@
 
 Página web moderna e interactiva para **Valhalla Gym**, un gimnasio ficticio. Este proyecto es un sitio web completo desarrollado con **HTML5**, **CSS3** y **JavaScript vanilla**, ofreciendo una experiencia de usuario atractiva y funcional.
 
+**Link de la página** 
+---
+https://danielbernadpenuelas.github.io/
 ---
 
 ## Características Principales
