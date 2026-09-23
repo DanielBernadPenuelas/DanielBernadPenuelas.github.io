@@ -2,11 +2,20 @@
     width: 80px;
     height: 80px;
 }
-.icono2{
-    width: 45px;
-    height: 45px;
-}
+
 .img_peque{
     width: 30px;
     height: 30px;
+}
+@media (max-width: 767px) {
+  .icono2 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .icono2 {
+    width: 45px;
+    height: 45px;
+  }
 }

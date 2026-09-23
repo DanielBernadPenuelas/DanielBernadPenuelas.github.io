@@ -34,3 +34,16 @@ body {
 .margen{
     margin-top: 100px;
 }
+@media (max-width: 767px) {
+  .icono2 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .icono2 {
+    width: 45px;
+    height: 45px;
+  }
+}
+

@@ -33,23 +33,26 @@
         </nav>
     </header>
     <div class="container">
-        <div class="text-center mb-4 margen">
-            <img class="icono" src="../img/LogoCompleto.png" onclick="window.location.href='../index.html'" alt="Valhallagym icono">
-            <h1>Iniciar sesión</h1>
+        <div class="row">
+            <div class="text-center mb-4 margen">
+                <img class="icono" src="../img/LogoCompleto.png" onclick="window.location.href='../index.html'" alt="Valhallagym icono">
+                <h1>Iniciar sesión</h1>
+            </div>
+            <form id="usuario">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre de usuario</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre de usuario">
+                </div>
+                <div class="mb-3">
+                    <label for="contraseña" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Ingrese su contraseña">
+                </div>
+                <a  href="../html/Área de cliente.html" onclick="consultaUsuario()"> Registrarse</a>
+            </form>
+            <p class="text-center mt-3">¿No tienes una cuenta? <a href="../html/Crearcuenta.html" class="btn btn-link">Crear una cuenta</a></p>
+            <div id="mensaje" class="text-center mt-3"></div>
+
         </div>
-        <form id="usuario">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre de usuario</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre de usuario">
-            </div>
-            <div class="mb-3">
-                <label for="contraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contraseña" placeholder="Ingrese su contraseña">
-            </div>
-            <a  href="../html/Área de cliente.html" onclick="consultaUsuario()"> Registrarse</a>
-        </form>
-        <p class="text-center mt-3">¿No tienes una cuenta? <a href="../html/Crearcuenta.html" class="btn btn-link">Crear una cuenta</a></p>
-        <div id="mensaje" class="text-center mt-3"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
