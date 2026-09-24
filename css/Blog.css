@@ -34,6 +34,18 @@ img{
   width: 750px;
   height: 350px;
 }
-@media screen {
-  
+@media (max-width: 767px) {
+  .icono2 {
+    display: none;
+  }
+  .hidden{
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .icono2 {
+    width: 45px;
+    height: 45px;
+  }
 }

@@ -63,6 +63,9 @@ footer {
     body {
         padding-bottom: 250px;
     }
+    .hidden{
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
