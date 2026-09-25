@@ -12,20 +12,6 @@ img{
     padding: 0;
     margin: 0;
 }
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f8f9fa;
-}
-.container {
-    max-width: 500px;
-    padding: 2rem;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-}
 
 .img_peque{
     width: 30px;
@@ -49,4 +35,6 @@ body {
     height: 45px;
   }
 }
-
+.margen_derecho{
+  margin-right: 30px;
+}
