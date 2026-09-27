@@ -38,3 +38,7 @@ img{
     height: 45px;
   }
 }
+body>div>form>div>textarea{
+  margin-top: 40px;
+  margin-bottom: 20px;
+}

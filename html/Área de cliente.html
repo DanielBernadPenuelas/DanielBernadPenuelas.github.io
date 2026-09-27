@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-primary fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img class="icono" src="../img/logocompleto.jpeg" onclick="window.location.href='../index.html'" alt="Valhallagym">
+                    <img class="icono" src="../img/logocompleto.jpeg" onclick="window.location.href='../index.html'" alt="Valhallagym_icono">
                     Valhallagym
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menunav">
@@ -36,7 +36,7 @@
         <h2 class="text-center mb-4">Área de Cliente</h2>
         <form action="/seleccionar_plan" method="post" id="formulario-plan">
             <div>
-                <label for="plan" class="form-label">Seleccione su plan:</label>
+                <label for="plan" class="form-label"><b>Seleccione su plan:</b></label>
                 <select class="form-select" id="plan">
                     <option value="nutricionista" id="Nutricionista">Plan de Nutricionista +10€</option>
                     <option value="cocina" id="Cocina">Plan de Cocina +20€</option>
@@ -48,7 +48,7 @@
         </form>
         <form action="/seleccionar_club" method="post" id="formulario-club">
             <div class="mb-3 mt-5">
-                <label for="ubicacion" class="form-label">Seleccione su gimnasio a cambiar:</label>
+                <label for="ubicacion" class="form-label"><b>Seleccione su gimnasio a cambiar:</b></label>
                 <select class="form-select" id="ubicacion">
                     <option value="nutricionista" id="Valencia">Valencia, Colon 25</option>
                     <option value="cocina" id="Barcelona">Barcelona, Rambla 24</option>
@@ -57,12 +57,27 @@
             </div>
             <a  href="../html/IniciarSesion.html" class="btn btn-primary w-100" id="club-button" onclick="club()"> Seleccionar gimnasio</a>
         </form>
+        <form action="post" id="Cambiar_contraseña">
+            <div class="mb-3 mt-5">
+                <label for="Se me ha olvidado la contraseña"><b>Cambiar contraseña</b></label>
+            </div>
+        </form>
+        <div class="mt-4 text center">
+            <a type="submit" class="btn btn-warning w-100" id="cambiar" onclick="cambiar()">Cambiar contraseña</a>
+        </div>
         <form action="/Incidencia" method="post" id="incidencia">
             <div class="mb-3 mt-5 row">
-                <label for="Incidencia" class="form-label" id="formulario">Incidencia</label>
-                <input type="text" class="form-control tamaño" id="incidencia" placeholder="Describe tu problema">
+                <label for="Incidencia" class="form-label" id="formulario"><b>Incidencia</b></label>
+                <select class="form-select" required name="Clasificación_incidencia" id="C_incidencia">
+                    <option value=""></option>
+                    <option value="I_maquinaria">Maquinaria</option>
+                    <option value="I_personal">Personal</option>
+                    <option value="I_tecnica">Aplicación</option>
+                    <option value="I_otros"> Otros</option>
+                </select>
+                <textarea type="text" class="form-control tamaño" id="incidencia" placeholder="Comentanos tu problema, para que podamos mejorar"></textarea>
             </div>
-            <a type="submit" class="btn btn-primary w-100" id="incidencia" onclick="incidencia()">Enviar la incidencia</a>
+            <a type="submit" class="btn btn-warning w-100" id="incidencia" onclick="incidencia()">Enviar la incidencia</a>
         </form>
         <div class="mt-4 text-center">
             <button class="btn btn-success margen_abajo" id="Alta" onclick="alta()">Darse de Baja</button>

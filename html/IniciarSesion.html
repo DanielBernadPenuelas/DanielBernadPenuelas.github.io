@@ -13,7 +13,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-light border-bottom border-primary fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img class="icono" src="../img/logocompleto.jpeg" onclick="window.location.href='../index.html'" alt="Valhallagym">
+                    <img class="icono" src="../img/logocompleto.jpeg" onclick="window.location.href='../index.html'" alt="Valhallagym_icono">
                     Valhallagym
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Menunav">
@@ -32,31 +32,43 @@
             </div>
         </nav>
     </header>
-    <div class="container" style="margin-top: 150px;">
-        <h1 style="text-align: center;">Iniciar sesión</h1>
-        <br>
-        <form action="" method="post">
-            <table border="1" style="width: 100%;">
-                <tr>
-                    <td style="width: 90%;" colspan="2"><b>Correo</b></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input style="width: 90%;" name="correo" required type="email" placeholder="Introduzca tu correo"></td>
-                </tr>
-                <tr>
-                    <td style="width: 90%;" colspan="2"><b>Contraseña</b></td>
-                </tr>
-                <tr>
-                    <td  colspan="2"><input style="width: 90%;" name="contraseña" type="password" placeholder="Introduzca tu contraseña"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input type="checkbox" name="Aceptar" required id="" style="margin-right: 20px; margin-left: 10px;">Aceptar <a href="">términos</a> y <a href="">condiciones</a><br></td>
-                </tr>
-                <tr>
-                    <td style="margin-top: 40px;" colspan="2"><button class="btn-primary btn margen_derecho">Acceder</button> <a href="">No tengo cuenta, crea una</a></td>
-                </tr>
-            </table>
-        </form>
+    <div class="container min-vh-100 d-flex align-items-center justify-content-center py-5">
+        <div class="col-12 col-sm-10 col-md-7 col-lg-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4 p-md-5">
+                    <h1 class="h3 text-center mb-4">Iniciar sesión</h1>
+
+                    <form action="" method="post">
+                        <div class="mb-3">
+                            <label for="correo" class="form-label fw-bold">Correo</label>
+                            <input type="email" class="form-control" id="correo" name="correo"
+                                placeholder="Introduce tu correo" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label fw-bold">Contraseña</label>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena"
+                                placeholder="Introduce tu contraseña" required>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="aceptar" name="aceptar" required>
+                            <label class="form-check-label" for="aceptar">
+                                Acepto los <a href="#">términos y condiciones</a>
+                            </label>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Acceder</button>
+                        </div>
+
+                        <p class="text-center mt-3 mb-0">
+                            ¿No tienes cuenta? <a href="#">Crea una</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
         <footer class="bg-primary text-center fixed-bottom " style="margin-top: 100px;">
         <nav class="navbar">

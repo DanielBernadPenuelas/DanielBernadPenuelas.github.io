@@ -123,3 +123,6 @@ h2{
     height: 45px;
   }
 }
+.cursor-bloqueado{
+    overflow-x: hidden;
+}
