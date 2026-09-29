@@ -57,6 +57,7 @@ img{
 .carrucel {
     width: 100%;
     overflow: hidden; 
+    height: 100%;
 }
 
 .carrucel ul {
@@ -108,6 +109,10 @@ h2{
 .margen_arriba{
     margin-top: 100px;
 }
+.cursor-bloqueado{
+    overflow-x: hidden;
+}
+
 @media (max-width: 767px) {
   .icono2 {
     display: none;
@@ -115,14 +120,9 @@ h2{
   .hidden{
     display: none;
   }
-}
-
-@media (min-width: 768px) {
+}@media (min-width: 768px) {
   .icono2 {
     width: 45px;
     height: 45px;
   }
-}
-.cursor-bloqueado{
-    overflow-x: hidden;
 }
