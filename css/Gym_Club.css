@@ -145,4 +145,11 @@ opacity: 0.8;
     body {
         padding-bottom: 250px;
     }
+    .icono{
+        width: 60px;
+        height: auto;
+  }
+    .icono2{
+        display: none;
+    }
 }

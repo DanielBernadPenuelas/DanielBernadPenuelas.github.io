@@ -37,6 +37,10 @@ img{
   .hidden{
     display: none;
   }
+  .icono{
+    width: 60px;
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) {
