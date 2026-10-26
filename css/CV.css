@@ -1,7 +1,7 @@
 :root{
-    --color1:#287A74;
-    --color2:#55A9A0;
-    --color3:#AEEED3;
+    --color1:#0d6efd;
+    --color2:#aec8ef;
+    --color3:#bfe8f9;
     --color4:#FFF8B0;
 }
 *{
@@ -100,12 +100,10 @@ main>div{
 }
 main>div>div:first-child p{
     font-size: 0.9rem;
-    color: var(--color1);
     font-weight: bold;
 }
 main h3{
     font-size: 1.2rem;
-    color: var(--color1);
 }
 main h3+p{
     font-weight: bold;
