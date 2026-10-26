@@ -1,140 +1,74 @@
-# Valhalla Gym - Página Web
+# Valhalla Gym: web completa para un gimnasio
 
-Página web moderna e interactiva para **Valhalla Gym**, un gimnasio ficticio. Este proyecto es un sitio web completo desarrollado con **HTML5**, **CSS3** y **JavaScript vanilla**, ofreciendo una experiencia de usuario atractiva y funcional.
+**[Ver la web en vivo →](https://danielbernadpenuelas.github.io/)**
 
-**Link de la página** 
----
-https://danielbernadpenuelas.github.io/
----
+Web de un gimnasio ficticio que cubre todo el recorrido de un cliente real: conocer el gimnasio, registrarse, elegir un plan, pagarlo y entrar en su área privada. La hice con **HTML, CSS y JavaScript sin frameworks**, para dominar las bases sobre las que funcionan React, Angular o Vue.
 
-## Características Principales
-
-**Diseño Responsivo** - Interfaz adaptable a todos los dispositivos  
-**Sistema de Autenticación** - Iniciar sesión y crear cuenta  
-**Sistema de Pagos** - Múltiples métodos de pago disponibles  
-**Horarios y Reservas** - Visualización de horarios de clases  
-**Área de Cliente** - Portal personalizado para miembros  
-**Blog** - Sección de contenido sobre fitness y salud  
-**Múltiples Sedes** - Información de diferentes locales  
-**Funcionalidades Interactivas** - JavaScript para mejorar la experiencia
+<!-- Añade aquí una captura o un GIF de la web en móvil y escritorio -->
 
 ---
 
-## Estructura del Proyecto
+## Qué demuestra este proyecto
+
+| Lo que implementé | Dónde lo uso en un equipo |
+|---|---|
+| Recorrido completo de usuario: registro → login → pago → área de cliente | Pensar en producto y en conversión, no en pantallas sueltas |
+| Diseño responsive para móvil, tablet y escritorio | La mayoría del tráfico web llega desde el móvil |
+| Validación de formularios en el cliente | Menos errores y menos abandono en registros y pagos |
+| Manejo del DOM y del estado con JavaScript sin librerías | Base sólida para aprender cualquier framework rápido y depurar cuando falla |
+| Persistencia de sesión con `localStorage` | Entender el estado en el navegador y sus límites de seguridad |
+| 9 páginas con navegación y estilos coherentes | Mantener un proyecto de varias vistas ordenado y consistente |
+| Desplegada en GitHub Pages | Entregar algo que funciona y que cualquiera puede abrir, no solo código |
+
+---
+
+## Recorrido del usuario
 
 ```
-web_Valhalla_gym/
-├── html/ 
-│   └──Valhalla_gym.html          # Página principal
-│   └──IniciarSesion.html         # Login de usuarios
-│   └──Crearcuenta.html           # Registro de nuevos usuarios
-│   └──Área de cliente.html       # Panel del usuario logueado
-│   └──Horario.html               # Horarios de clases
-│   └──Clubes.html                # Información de las sedes
-│   └──Blog.html                  # Blog del gimnasio
-│   └──Métodospagos.html          # Métodos de pago disponibles
-│   └──Pago.html                  # Página de pago
-├── css/                          # Estilos CSS
-│   └── styles.css
-├── Js/                         # Scripts JavaScript
-│   └── script.js
-├── Img/                        # Imágenes y recursos
-│   └── ...
-└── Valhalla_gym.html          # Página principal
-
+Inicio ──► Crear cuenta ──► Iniciar sesión ──► Clubes / Horarios / Blog
+                                                    │
+                                                    ▼
+                          Área de cliente ◄── Pago ◄── Métodos de pago
 ```
 
----
-
-### Requisitos Previos
-
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Node.js y npm (opcional, para servir archivos localmente)
-- Editor de código (VS Code, Sublime Text, etc.)
-
----
-
-## Tecnologías Utilizadas
-
-| Tecnología | Descripción |
-|------------|------------|
-| **HTML5** | Estructura semántica de la página |
-| **CSS3** | Estilos y animaciones modernas |
-| **JavaScript ES6+** | Interactividad y lógica del cliente |
-| **npm** | Gestor de paquetes |
+| Página | Para qué sirve |
+|---|---|
+| `Valhalla_gym.html` | Portada con promociones y navegación principal |
+| `Crearcuenta.html` · `IniciarSesion.html` | Registro y acceso de socios, con validación |
+| `Clubes.html` | Sedes y su información |
+| `Horario.html` | Horario de clases y actividades |
+| `Blog.html` | Artículos de fitness y nutrición |
+| `Métodospagos.html` · `Pago.html` | Elección de plan, carrito y confirmación |
+| `Área de cliente.html` | Panel del socio: membresía e historial de pagos |
 
 ---
 
-## Páginas Disponibles
+## Alcance y límites
 
-### Página Principal (`Valhalla_gym.html`)
-- Bienvenida e información general del gimnasio
-- Destacados y promociones
-- Navegación principal
+Es un **prototipo frontend**: no tiene servidor ni base de datos.
 
-### Autenticación
-- **IniciarSesion.html** - Acceso para usuarios registrados
-- **Crearcuenta.html** - Registro de nuevos miembros
+- Los **usuarios y la sesión** se guardan en `localStorage`. Vale para la demo, pero no es seguro para datos reales porque cualquiera puede leerlo o modificarlo desde el navegador.
+- Los **pagos están simulados**: no se procesa ningún cobro.
 
-### Información y Servicios
-- **Horario.html** - Horarios de clases y actividades
-- **Clubes.html** - Ubicaciones y detalles de las sedes
-- **Blog.html** - Artículos sobre fitness, nutrición y salud
-- **Métodospagos.html** - Opciones de pago disponibles
+### Qué cambiaría para llevarlo a producción
 
-### Área Personalizada
-- **Área de cliente.html** - Dashboard para miembros registrados
-- **Pago.html** - Procesamiento de pagos y membresías
+- **Backend real** con autenticación en el servidor, contraseñas hasheadas (bcrypt) y sesiones con cookies `HttpOnly` o JWT.
+- **Pagos con una pasarela** (Stripe o Redsys), sin guardar nunca datos de tarjeta propios.
+- **Base de datos** para socios, reservas y pagos.
+- **Accesibilidad y SEO:** revisar contraste, navegación con teclado y puntuación de Lighthouse.
 
 ---
 
-## Funcionalidades JavaScript
+## Ejecutarlo en local
 
-El proyecto incluye scripts interactivos que proporcionan:
+No necesita instalar nada:
 
-- Validación de formularios
-- Gestión de sesiones de usuario (localStorage)
-- Navegación dinámica
-- Efectos visuales y animaciones
-- Integración de funcionalidades AJAX
+```bash
+git clone https://github.com/danielbernadpenuelas/danielbernadpenuelas.github.io.git
+# Abre Valhalla_gym.html en el navegador
+```
 
----
+## Stack
 
-## Uso Básico
-
-### Flujo de Usuario Típico
-
-1. **Registrarse** → `Crearcuenta.html`
-2. **Iniciar sesión** → `IniciarSesion.html`
-3. **Explorar servicios** → `Clubes.html`, `Horario.html`, `Blog.html`
-4. **Realizar pago** → `Métodospagos.html` → `Pago.html`
-5. **Acceder al área personal** → `Área de cliente.html`
-
----
-
-##  Funcionalidades Principales
-
-###  Sistema de Autenticación
-- Registro de nuevos usuarios con validación
-- Inicio de sesión seguro
-- Gestión de sesiones con localStorage
-
-###  Sistema de Pagos
-- Múltiples métodos de pago
-- Carrito de compra funcional
-- Confirmación de transacciones
-
-###  Gestión de Contenidos
-- Blog dinámico con artículos
-- Horarios actualizables
-- Información de múltiples sedes
-
-###  Área de Cliente
-- Panel personalizado
-- Historial de pagos
-- Información de membresía
-
----
-**Autor:** Daniel Bernad Peñuelas  
----
+HTML5 · CSS3 · JavaScript ES6+ · GitHub Pages
 
